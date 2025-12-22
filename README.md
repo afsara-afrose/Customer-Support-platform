@@ -1,16 +1,22 @@
-# React + Vite
+1.What is JSX, and why is it used?
+Ans:
+JSX is a syntax that looks like HTML but is used in React to write components. It makes it easier to create and visualize the UI. React then converts JSX into JavaScript.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+2.What is the difference between State and Props?
+Ans:
+State: Any data that belongs to a component and can change over time.
+Props:  Any data passed from a parent component to a child component. Props are read-only.
 
-Currently, two official plugins are available:
+3.What is the useState hook, and how does it work?
+Ans:
+ It is a React hook that  add state to a functional component. We use it to create a variable and a function to update that variable.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+4.How can you share state between components in React?
+Ans:
+We can share state by lifting it up to a common parent component and passing it down as props to child components.
 
-## React Compiler
+5.How is event handling done in React?
+Ans:
+React handles events using functions and camelCase syntax. Example:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<button onClick={handleClick}>Click Me</button>
