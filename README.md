@@ -18,5 +18,4 @@ We can share state by lifting it up to a common parent component and passing it 
 5.How is event handling done in React?
 Ans:
 React handles events using functions and camelCase syntax. Example:
-
 <button onClick={handleClick}>Click Me</button>

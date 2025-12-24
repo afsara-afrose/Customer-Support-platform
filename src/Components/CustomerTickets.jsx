@@ -41,10 +41,10 @@ const CustomerTickets = ({
         {/* In Progress */}
        {inProgressTasks.length === 0 ? (
   <div>
-    <p className="text-center opacity-90">
+    <p className="text-center text-gray-500 opacity-90">
     No resolved task
   </p>
-  <p className='text-center  py-4 opacity-80'>Click on a Ticket to start working</p>
+  <p className='text-center  text-gray-500 py-4 opacity-80'>Click on a Ticket to start working</p>
   </div>
 ) : (
   inProgressTasks.map((task) => (
@@ -58,7 +58,8 @@ const CustomerTickets = ({
 
       <div className="flex items-center gap-2 mt-2">
         
-        <button  onClick={() => onCompleteTask(task)} 
+        <button 
+        type='button' onClick={() => onCompleteTask(task)} 
         className="bg-green-600 text-white w-full p-2 rounded">
           Completed
         </button>
@@ -71,11 +72,19 @@ const CustomerTickets = ({
 
         {/* Resolved */}
         
-        <div className='bg-white rounded-xl mt-10 '>
+        <div className='bg-white rounded-xl mt-10 p-5'>
           <h1 className="font-bold text-xl text-gray-500 opacity-90">
           Resolved Task
         </h1>
-          {resolvedTasks.map((task) => (
+        {resolvedTasks.length === 0 ? (
+  <div>
+    <p className="text-center  text-gray-500 opacity-90 mt-3">
+    Task did't  Completed yet
+  </p>
+  
+  </div>
+) :(  
+  resolvedTasks.map((task) => (
           <div
             key={task.id}
             className="p-3 border rounded-lg mt-5 bg-gray-100 text-gray-600 "
@@ -90,11 +99,13 @@ const CustomerTickets = ({
 
             </div>
           </div>
-        ))}
+        ))
+      )}
         </div>
       </div>
     </div>
   );
+
 };
 
 export default CustomerTickets;
